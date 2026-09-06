@@ -52,7 +52,23 @@ function setMessage(type: "success" | "error", text: string) {
 function setInputState(valid: boolean) {
     emailWrap.classList.remove("valid", "invalid");
     emailWrap.classList.add(valid ? "valid" : "invalid");
+    if (valid) {
+        emailInput.removeAttribute("aria-invalid");
+    } else {
+        emailInput.setAttribute("aria-invalid", "true");
+    }
 }
+
+function clearErrorState() {
+    if (emailWrap.classList.contains("invalid")) {
+        emailWrap.classList.remove("invalid");
+        emailInput.removeAttribute("aria-invalid");
+    }
+    formMsg.className = "form-msg hidden";
+}
+
+emailInput.addEventListener("input", clearErrorState);
+consentInput.addEventListener("change", clearErrorState);
 
 async function sendLeadToSheets(email: string) {
     const formData = new FormData();
