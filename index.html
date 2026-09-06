@@ -2,272 +2,229 @@
 <html lang="he" dir="rtl">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M8C0VTCCGF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8C0VTCCGF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-M8C0VTCCGF');
+    </script>
 
-  gtag('config', 'G-M8C0VTCCGF');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carma | פיילוט נהיגה חכמה לצעירים</title>
-    <meta name="description" content="פיילוט MVP של Carma: נהגות ונהגים צעירים בגילאי 17-24 מורידים אפליקציה חינמית, נרשמים ומשתפים נתוני נהיגה בתמורה להבטחה לתגמולים עתידיים.">
-    <meta property="og:title" content="Carma | פיילוט נהיגה חכמה לצעירים">
-    <meta property="og:description" content="הצטרפו לפיילוט MVP של Carma ובדקו איתנו אם נהיגה בטוחה יכולה להפוך לתגמול עתידי.">
+    <title>Carma | נהיגה בטוחה שמתגמלת אתכם</title>
+    <meta name="description" content="Carma הופכת כל נסיעה למודעות, שיפור ותגמול. אפליקציה שמנטרת נהיגה בזמן אמת ומתרגמת נהיגה בטוחה לנקודות שממירים להטבות.">
+    <meta property="og:title" content="Carma | נהיגה בטוחה שמתגמלת אתכם">
+    <meta property="og:description" content="נהיגה בטוחה טובה לכולם. היא צריכה לתגמל גם את הנהג. הכירו את Carma.">
     <meta property="og:type" content="website">
-
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="/mark.svg" type="image/svg+xml">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Heebo:wght@500;700;800&display=swap" rel="stylesheet">
-
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            500: "#3b82f6",
-                            600: "#2563eb",
-                            700: "#1d4ed8"
-                        }
-                    },
-                    boxShadow: {
-                        soft: "0 20px 45px -24px rgba(15, 23, 42, 0.22)",
-                        glow: "0 18px 40px -18px rgba(37, 99, 235, 0.45)"
-                    },
-                    animation: {
-                        float: "float 6s ease-in-out infinite",
-                        rise: "rise .8s ease-out both"
-                    },
-                    keyframes: {
-                        float: {
-                            "0%, 100%": { transform: "translateY(0px)" },
-                            "50%": { transform: "translateY(-8px)" }
-                        },
-                        rise: {
-                            "0%": { opacity: "0", transform: "translateY(16px)" },
-                            "100%": { opacity: "1", transform: "translateY(0)" }
-                        }
-                    }
-                }
-            }
-        };
-    </script>
-
-    <style>
-        :root {
-            --bg: #f8fafc;
-            --panel: rgba(255, 255, 255, 0.74);
-            --line: rgba(148, 163, 184, 0.25);
-            --dark: #0f172a;
-            --muted: #475569;
-            --primary: #2563eb;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: "Assistant", "Heebo", sans-serif;
-            background: radial-gradient(circle at 16% 10%, #dbeafe 0%, transparent 36%),
-                        radial-gradient(circle at 82% 18%, #eff6ff 0%, transparent 34%),
-                        var(--bg);
-            color: var(--dark);
-        }
-
-        .headline {
-            font-family: "Heebo", "Assistant", sans-serif;
-        }
-
-        .glass {
-            background: var(--panel);
-            backdrop-filter: blur(14px);
-            border: 1px solid var(--line);
-        }
-
-        .hero-ring {
-            position: absolute;
-            inset-inline-end: -5rem;
-            top: -5rem;
-            width: 18rem;
-            height: 18rem;
-            border-radius: 9999px;
-            border: 1px solid rgba(37, 99, 235, 0.17);
-            box-shadow: inset 0 0 60px rgba(37, 99, 235, 0.08);
-            pointer-events: none;
-        }
-
-        .lead-input {
-            direction: ltr;
-            text-align: left;
-        }
-
-        .error-shake {
-            animation: shake .25s ease-in-out 2;
-        }
-
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-3px); }
-            75% { transform: translateX(3px); }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation: none !important;
-                transition: none !important;
-                scroll-behavior: auto !important;
-            }
-        }
-    </style>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Heebo:wght@500;700;800&display=swap"
+        rel="stylesheet"
+        media="print"
+        onload="this.media='all'"
+    >
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Heebo:wght@500;700;800&display=swap" rel="stylesheet">
+    </noscript>
 </head>
 <body class="antialiased">
-    <div class="min-h-screen">
-        <header class="sticky top-0 z-40 border-b border-slate-200/70 bg-white/75 backdrop-blur-xl">
-            <nav class="mx-auto flex h-20 w-full max-w-6xl items-center justify-between px-5 sm:px-8">
-                <a href="#" class="flex items-center gap-3">
-                    <span class="grid h-10 w-10 place-items-center rounded-2xl bg-brand-600 shadow-glow">
-                        <i data-lucide="car" class="h-5 w-5 text-white"></i>
-                    </span>
-                    <span class="headline text-2xl font-extrabold tracking-tight text-slate-900">Carma</span>
+    <div class="page">
+        <header class="site-header">
+            <nav class="nav">
+                <a href="#" class="brand">
+                    <img src="/mark.svg" alt="" class="brand-mark" width="36" height="36">
+                    <span class="brand-name">Carma</span>
                 </a>
 
-                <a href="#lead" class="rounded-full bg-brand-600 px-5 py-2.5 text-sm font-bold text-white transition duration-300 hover:bg-brand-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2">
-                    תפסו מקום בפיילוט
-                </a>
+                <div class="nav-links">
+                    <a href="#why">למה זה חשוב</a>
+                    <a href="#product">האפליקציה</a>
+                    <a href="#tech">איך זה עובד</a>
+                </div>
+
+                <a href="#join" class="btn btn-primary btn-sm">הצטרפו לעדכונים</a>
             </nav>
         </header>
 
         <main>
-            <section class="relative overflow-hidden px-5 pb-16 pt-10 sm:px-8 sm:pt-16 lg:pb-24">
-                <div class="hero-ring"></div>
-                <div class="mx-auto grid w-full max-w-6xl items-center gap-10 lg:grid-cols-2">
-                    <div class="animate-rise text-right">
-                        <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-amber-300 bg-amber-100 px-4 py-2 text-xs font-bold text-amber-900 shadow-sm sm:text-sm">
-                            <span class="inline-block h-2 w-2 rounded-full bg-amber-500"></span>
-                            הפיילוט מוגבל ל-100 הנהגות והנהגים הראשונים
-                        </div>
-
-                        <h1 class="headline text-4xl font-extrabold leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
-                            <span id="hero-line-1">הנהיגה שלכם שווה כסף!</span>
-                            <span id="hero-line-2" class="block text-brand-600">בואו נבדוק כמה</span>
+            <!-- HERO -->
+            <section class="hero" id="why">
+                <div class="hero-ring" aria-hidden="true"></div>
+                <div class="container hero-grid">
+                    <div class="hero-copy">
+                        <h1 class="headline hero-title">
+                            נהיגה בטוחה טובה לכולם.<br>
+                            <span class="accent">היא צריכה לתגמל גם את הנהג.</span>
                         </h1>
 
-                        <p id="hero-subheadline" class="mt-6 max-w-xl text-lg leading-relaxed text-slate-600 sm:text-xl">
-                            תפסיקו לנהוג בחינם! Carma הופכת כל קילומטר של נהיגה בטוחה לקרדיט לרכישות בבתי עסק שונים.                        </p>
+                        <p class="hero-sub">
+                            נהיגה בטוחה שומרת על נהגים, נוסעים וכל מי שבדרך. אבל נהגים כמעט ולא
+                            מקבלים משוב מיידי, וגם לא ערך אישי, על נהיגה טובה יותר.
+                        </p>
 
-                        <div class="mt-9 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
-                            <a href="#how" class="rounded-2xl border border-slate-300 px-6 py-3 text-center font-bold text-slate-700 transition hover:border-slate-400 hover:text-slate-900">
-                                איך זה עובד
-                            </a>
-                            <a id="hero-primary-cta" href="#lead" class="rounded-2xl bg-brand-600 px-6 py-3 text-center font-bold text-white shadow-glow transition hover:bg-brand-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2">
-                                אני רוצה להצטרף
-                            </a>
+                        <div class="hero-actions">
+                            <a href="#tech" class="btn btn-ghost">איך זה עובד</a>
+                            <a href="#join" class="btn btn-primary">הצטרפו לעדכונים</a>
                         </div>
                     </div>
 
-                    <div class="relative mx-auto w-full max-w-md animate-float">
-                        <div class="glass rounded-[2rem] p-4 shadow-soft sm:p-5">
-                            <div class="rounded-[1.6rem] bg-slate-900 p-5 text-white sm:p-6">
-                                <div class="mb-6 flex items-center justify-between">
-                                    <div class="rounded-xl bg-white/10 px-3 py-1 text-xs font-bold tracking-wide">LIVE</div>
-                                    <p class="text-xs text-slate-300">הנסיעה של היום</p>
-                                </div>
-
-                                <div class="grid grid-cols-2 gap-4">
-                                    <div class="rounded-2xl bg-white/10 p-4">
-                                        <p class="text-xs text-slate-300">ציון נהיגה</p>
-                                        <p class="mt-2 text-4xl font-extrabold">97</p>
-                                    </div>
-
-                                    <div class="rounded-2xl bg-gradient-to-b from-brand-500 to-brand-700 p-4">
-                                        <p class="text-xs text-blue-100">קרדיט זמין</p>
-                                        <p class="mt-2 text-3xl font-extrabold">₪148</p>
-                                    </div>
-                                </div>
-
-                                <div class="mt-5 space-y-2">
-                                    <div class="flex items-center justify-between rounded-xl bg-white/10 px-3 py-2 text-sm">
-                                        <span class="text-slate-300">בלימות חדות</span>
-                                        <span class="font-bold text-emerald-300">מצוין</span>
-                                    </div>
-                                    <div class="flex items-center justify-between rounded-xl bg-white/10 px-3 py-2 text-sm">
-                                        <span class="text-slate-300">שימוש בטלפון</span>
-                                        <span class="font-bold text-emerald-300">0 אירועים</span>
-                                    </div>
-                                    <div class="flex items-center justify-between rounded-xl border border-emerald-300/40 bg-emerald-400/15 px-3 py-2 text-sm">
-                                        <span class="font-bold text-emerald-200">זכאות להטבה</span>
-                                        <span class="rounded-lg bg-emerald-300/25 px-2 py-1 font-bold text-emerald-100">הגעת ליעד! קופון Wolt</span>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="hero-visual">
+                        <div class="phone-frame float">
+                            <img src="/shots/drive.webp" alt="מסך הבית של אפליקציית Carma עם ציון נהיגה וסיכום נסיעות" loading="eager">
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section aria-label="שותפים" class="border-y border-slate-200/70 bg-white/70 py-8 sm:py-10">
-                <div class="mx-auto flex w-full max-w-6xl flex-col items-center gap-5 px-5 sm:px-8">
-                    <p class="text-xs font-bold uppercase tracking-[0.24em] text-slate-400">בדרך להטבות בסיבוב הבא</p>
-                    <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-2xl font-extrabold text-slate-700 sm:text-3xl">
-                        <span class="tracking-tight">Wolt</span>
-                        <span>KSP</span>
-                        <span>Be</span>
-                    </div>
-                    <p class="text-xs text-slate-500">הלוגואים מוצגים כהמחשה בלבד. נכון לעכשיו אין שיתוף פעולה מסחרי פעיל עם המותגים.</p>
-                </div>
-            </section>
+            <!-- BRIDGE + THREE QUESTIONS -->
+            <section class="bridge">
+                <div class="container">
+                    <p class="bridge-line">אז למה כל כך קשה לשמור על נהיגה בטוחה לאורך זמן?</p>
 
-            <section id="how" class="px-5 py-16 sm:px-8 sm:py-20">
-                <div class="mx-auto w-full max-w-6xl">
-                    <div class="mb-10 text-center">
-                        <h2 class="headline text-3xl font-extrabold sm:text-4xl">איך זה עובד?</h2>
-                        <p class="mt-3 text-slate-600">פשוט, מתגמל ובטוח לשימוש יומיומי.</p>
-                    </div>
-
-                    <div class="grid gap-4 md:grid-cols-3">
-                        <article class="glass rounded-3xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-soft">
-                            <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-brand-600">
-                                <i data-lucide="car-front" class="h-5 w-5"></i>
-                            </div>
-                            <h3 class="headline text-2xl font-bold">נסיעה </h3>
-                            <p class="mt-2 leading-relaxed text-slate-600">מתחברים פעם אחת ל-Bluetooth, ומאותו רגע Carma עולה אוטומטית בכל נסיעה.</p>
+                    <div class="question-grid">
+                        <article class="question-card">
+                            <span class="question-tag">מודעות</span>
+                            <p>אילו הרגלי נהיגה שלי מסכנים אותי?</p>
                         </article>
-
-                        <article class="glass rounded-3xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-soft">
-                            <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-brand-600">
-                                <i data-lucide="coins" class="h-5 w-5"></i>
-                            </div>
-                            <h3 class="headline text-2xl font-bold">צבירת נקודות</h3>
-                            <p class="mt-2 leading-relaxed text-slate-600">צוברים נקודות Carma-Points בסיום כל נסיעה, ככל שתנהגו בטוח יותר - תרוויחו יותר.</p>
+                        <article class="question-card">
+                            <span class="question-tag">משוב</span>
+                            <p>מה כדאי לשפר בנסיעה הבאה?</p>
                         </article>
-
-                        <article class="glass rounded-3xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-soft">
-                            <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-brand-600">
-                                <i data-lucide="gift" class="h-5 w-5"></i>
-                            </div>
-                            <h3 class="headline text-2xl font-bold">הטבות</h3>
-                            <p class="mt-2 leading-relaxed text-slate-600">ממירים את הנקודות שנצברו במבחר הטבות שניתן לממש ברשתות מובילות.</p>
+                        <article class="question-card">
+                            <span class="question-tag">מוטיבציה</span>
+                            <p>למה כדאי להמשיך לנהוג טוב יותר?</p>
                         </article>
                     </div>
                 </div>
             </section>
 
-            <section id="lead" class="px-5 pb-20 pt-10 sm:px-8">
-                <div class="mx-auto w-full max-w-2xl rounded-[2rem] border border-slate-200 bg-white p-6 text-center shadow-soft sm:p-10">
-                    <h2 class="headline text-3xl font-extrabold text-slate-900 sm:text-4xl">תפסו מקום בנבחרת הנהגות והנהגים שלנו</h2>
-                    <p class="mx-auto mt-4 max-w-xl text-slate-600">השאירו מייל והצטרפו לפיילוט הראשוני. מספר המקומות מוגבל ל-100 נהגות ונהגים.</p>
+            <!-- PRODUCT: DRIVE -> UNDERSTAND -> COMPETE -> EARN -->
+            <section class="product" id="product">
+                <div class="container">
+                    <div class="section-head">
+                        <h2 class="headline">Carma הופכת כל נסיעה למודעות, שיפור ותגמול</h2>
+                    </div>
 
-                    <form id="lead-form" name="submit-to-google-sheet" class="mx-auto mt-8 w-full max-w-xl" novalidate>
-                        <div id="email-wrap" class="rounded-2xl border border-slate-300 bg-white p-2 text-right shadow-sm transition">
-                            <div class="flex flex-col gap-2 sm:flex-row sm:items-center">
+                    <ol class="steps">
+                        <li class="step">
+                            <div class="step-shot"><img src="/shots/drive.webp" alt="מסך הבית: תחילת נסיעה וסיכום נהיגה" loading="lazy"></div>
+                            <span class="step-label">נוהגים</span>
+                            <p>הנסיעה נרשמת אוטומטית ברקע. אין כפתור לזכור.</p>
+                        </li>
+                        <li class="step">
+                            <div class="step-shot"><img src="/shots/understand.webp" alt="מסך סיכום נסיעה עם ציון 0 עד 100" loading="lazy"></div>
+                            <span class="step-label">מבינים</span>
+                            <p>ציון אחד לכל נסיעה, ובדיוק אילו התנהגויות הזיזו אותו.</p>
+                        </li>
+                        <li class="step">
+                            <div class="step-shot"><img src="/shots/compete.webp" alt="מסך טבלת מובילים מול חברים ועיר" loading="lazy"></div>
+                            <span class="step-label">מתחרים</span>
+                            <p>רואים איך מדורגים מול חברים ומול העיר.</p>
+                        </li>
+                        <li class="step">
+                            <div class="step-shot"><img src="/shots/earn.webp" alt="מסך חנות ההטבות עם יתרת נקודות" loading="lazy"></div>
+                            <span class="step-label">מרוויחים</span>
+                            <p>ממירים נקודות למגוון קטגוריות הטבות.</p>
+                        </li>
+                    </ol>
+
+                    <div class="metric-strip">
+                        <div class="metric">
+                            <span class="metric-num">0–100</span>
+                            <span class="metric-cap">טווח ציון הנסיעה</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-num">5</span>
+                            <span class="metric-cap">התנהגויות נהיגה נמדדות</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-num">CMT DriveWell</span>
+                            <span class="metric-cap">אותן 5 התנהגויות שהתקן בתעשייה מודד</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HOW IT WORKS (TECH) -->
+            <section class="tech" id="tech">
+                <div class="container">
+                    <div class="section-head">
+                        <span class="eyebrow">איך זה עובד מאחורי הקלעים</span>
+                    </div>
+
+                    <div class="pipeline" role="img" aria-label="תרשים זרימה: הטלפון אוסף GPS ותנועה, השרת מזהה מחדש ומשקלל ציון">
+                        <div class="pipeline-node">
+                            <strong>הטלפון</strong>
+                            <span>GPS · תאוצה · ג׳ירוסקופ</span>
+                        </div>
+                        <div class="pipeline-arrow" aria-hidden="true">→</div>
+                        <div class="pipeline-node">
+                            <strong>השרת</strong>
+                            <span>זיהוי אירועים מחדש מנתוני GPS</span>
+                        </div>
+                        <div class="pipeline-arrow" aria-hidden="true">→</div>
+                        <div class="pipeline-node">
+                            <strong>הציון</strong>
+                            <span>שקלול 5 התנהגויות, 0–100</span>
+                        </div>
+                    </div>
+
+                    <div class="callouts">
+                        <article class="callout">
+                            <h3>שני גלאים, תוצאה אחת</h3>
+                            <p>אירועים מזוהים בזמן אמת בטלפון, וגם מחדש בשרת מנתוני ה-GPS. הציון הסופי לוקח את הגבוה מבין השניים — כך שלקוח שעבר מניפולציה אף פעם לא יכול להוריד את הציון.</p>
+                        </article>
+                        <article class="callout">
+                            <h3>קצב, לא סכום</h3>
+                            <p>כל מדידה מנורמלת ל-100 ק״מ או לשעת נהיגה, כדי שנסיעה ארוכה לא תיענש רק על היותה ארוכה.</p>
+                        </article>
+                        <article class="callout">
+                            <h3>טלמטריה חתומה</h3>
+                            <p>רק נתונים חתומים נכנסים לחישוב הציון. נתונים לא חתומים נשמרים לאבחון בלבד ולעולם לא משפיעים על התגמול.</p>
+                        </article>
+                    </div>
+
+                    <div class="weights">
+                        <span class="weights-label">משקל ההתנהגויות בציון</span>
+                        <div class="weights-bar" role="img" aria-label="פיזור משקלים: הסחת דעת 30 אחוז, מהירות 25 אחוז, בלימות חדות 20 אחוז, האצה אגרסיבית 15 אחוז, סיבובים חדים 10 אחוז">
+                            <span style="flex:30" class="w1">הסחת דעת 30%</span>
+                            <span style="flex:25" class="w2">מהירות 25%</span>
+                            <span style="flex:20" class="w3">בלימה חדה 20%</span>
+                            <span style="flex:15" class="w4">האצה 15%</span>
+                            <span style="flex:10" class="w5">סיבוב 10%</span>
+                        </div>
+                    </div>
+
+                    <div class="stack-row">
+                        <div class="stack-group">
+                            <span class="stack-title">מובייל</span>
+                            <span>React Native · Expo · TypeScript</span>
+                        </div>
+                        <div class="stack-group">
+                            <span class="stack-title">שרת</span>
+                            <span>Python · FastAPI · PostgreSQL</span>
+                        </div>
+                        <div class="stack-group">
+                            <span class="stack-title">ענן ו-CI</span>
+                            <span>Azure Container Apps · GitHub Actions</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- JOIN -->
+            <section id="join" class="join">
+                <div class="container">
+                    <div class="join-card">
+                        <h2 class="headline">רוצים לדעת מתי Carma יוצאת לדרך?</h2>
+                        <p class="join-sub">השאירו מייל ונעדכן אתכם בהשקה הרשמית ובהטבות חדשות.</p>
+
+                        <form id="lead-form" novalidate>
+                            <div id="email-wrap" class="email-wrap">
                                 <label for="email" class="sr-only">כתובת אימייל</label>
                                 <input
                                     id="email"
@@ -276,379 +233,40 @@
                                     inputmode="email"
                                     autocomplete="email"
                                     placeholder="name@example.com"
-                                    class="lead-input w-full rounded-xl border border-transparent px-4 py-3 text-base text-slate-900 outline-none transition focus:border-blue-200 focus:bg-blue-50/40"
+                                    class="lead-input"
                                     aria-describedby="email-help"
                                     required
                                 >
-                                <p id="email-help" class="sr-only">הכניסו כתובת אימייל לקבלת עדכונים על הפיילוט.</p>
-                                <button type="submit" class="w-full whitespace-nowrap rounded-xl bg-brand-600 px-6 py-3 font-bold text-white transition hover:bg-brand-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2 sm:w-auto">
-                                    אני רוצה להצטרף
-                                </button>
+                                <p id="email-help" class="sr-only">הכניסו כתובת אימייל לקבלת עדכונים.</p>
+                                <button type="submit" class="btn btn-primary">הצטרפו לעדכונים</button>
                             </div>
+
+                            <label for="consent" class="consent-row">
+                                <input id="consent" name="consent" type="checkbox" required>
+                                <span>אני מאשר/ת קבלת עדכונים ושמירה על פרטיות הנתונים שלי.</span>
+                            </label>
+
+                            <p class="join-note">רק עדכונים רלוונטיים, בלי ספאם.</p>
+
+                            <p id="form-msg" class="form-msg hidden" role="status" aria-live="polite"></p>
+                        </form>
+
+                        <div id="lead-success" class="lead-success hidden">
+                            <p class="headline">תודה שהצטרפתם!</p>
+                            <p>קיבלנו את הפרטים שלכם ונעדכן במייל כשיהיו חדשות.</p>
+                            <button id="share-cta" type="button" class="btn btn-primary">שתפו חבר או חברה</button>
                         </div>
-
-                        <label for="consent" class="mt-4 flex cursor-pointer items-start gap-2 text-right">
-                            <input id="consent" name="consent" type="checkbox" class="mt-0.5 h-4 w-4 rounded border-slate-300 text-brand-600 focus:ring-brand-600" required>
-                            <span class="text-sm text-slate-600">אני מאשר/ת הצטרפות לפיילוט ושמירה על פרטיות הנתונים שלי.</span>
-                        </label>
-
-                        <p class="mt-3 text-xs text-slate-500">מבטיחים לשלוח רק עדכונים רלוונטיים לפיילוט, בלי ספאם.</p>
-
-                        <p id="form-msg" class="mt-4 hidden rounded-xl px-4 py-3 text-sm font-bold" role="status" aria-live="polite"></p>
-                    </form>
-
-                    <div id="lead-success" class="mx-auto mt-8 hidden w-full max-w-xl rounded-2xl border border-emerald-200 bg-emerald-50 p-6 text-center">
-                        <p class="headline text-2xl font-extrabold text-emerald-800">תודה על ההתעניינות והעזרה!</p>
-                        <p class="mt-3 text-sm text-emerald-700">קיבלנו את הפרטים שלך ונעדכן במייל כששלב ההצטרפות הבא ייפתח.</p>
-                        <button id="share-cta" type="button" class="mx-auto mt-4 inline-flex items-center justify-center rounded-xl bg-emerald-700 px-4 py-2 text-sm font-bold text-white transition hover:bg-emerald-800">
-                            שתפו חבר או חברה שמתאימים לפיילוט
-                        </button>
                     </div>
                 </div>
             </section>
         </main>
 
-        <footer class="border-t border-slate-200/80 py-8 text-center text-sm text-slate-500">
-            <p class="font-semibold text-slate-700">Carma 2026</p>
-            <p class="mt-2">תנהגו בטוח. תרוויחו כל יום.</p>
-            <p class="mx-auto mt-3 max-w-2xl text-xs text-slate-600">הנתונים נשמרים בצורה מאובטחת ואנונימית בהתאם לתקני האבטחה המקובלים.</p>
+        <footer class="site-footer">
+            <p class="brand-name">Carma 2026</p>
+            <p>תנהגו בטוח. תרוויחו כל יום.</p>
         </footer>
     </div>
 
-    <script>
-        lucide.createIcons();
-
-        const leadForm = document.getElementById("lead-form");
-        const emailInput = document.getElementById("email");
-        const emailWrap = document.getElementById("email-wrap");
-        const formMsg = document.getElementById("form-msg");
-        const leadSuccess = document.getElementById("lead-success");
-        const shareCta = document.getElementById("share-cta");
-        const consentInput = document.getElementById("consent");
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-
-        const COUNTER_NAMESPACE = "carma_mvp_prod";
-        const VISITS_KEY = "site_visits";
-        const SIGNUPS_KEY = "consented_signups";
-        const COUNTER_BASE_CANDIDATES = ["https://api.countapi.xyz", "https://countapi.xyz"];
-
-        // Optional webhook URL for storing lead emails in a real backend.
-        // Example: https://your-server.com/api/leads
-        const LEAD_WEBHOOK_URL = "";
-        const LEADS_SHEETS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzc3Xvs-XsNStvFIbfu_ffNvpiQAzFwdVlDWeeySGWt4mcwzYgGCMQk7EE-vEENQ_Bc/exec";
-        const LEAD_SUCCESS_SESSION_KEY = "carma_signup_completed";
-        const OWNER_SIGNUPS_LOG_KEY = "carma_owner_signups_log";
-        const LOCAL_VISITS_KEY = "carma_local_visits";
-        const LOCAL_SIGNUPS_KEY = "carma_local_signups";
-        const VISIT_LAST_TRACKED_DAY_KEY = "carma_visit_last_tracked_day";
-        let remoteCounterDisabled = false;
-        let remoteCounterBase = COUNTER_BASE_CANDIDATES[0];
-        let remoteCounterWarned = false;
-
-        function showLeadSuccessState() {
-            leadForm.classList.add("hidden");
-            leadSuccess.classList.remove("hidden");
-        }
-
-        function initializeLeadSuccessState() {
-            if (sessionStorage.getItem(LEAD_SUCCESS_SESSION_KEY) === "1") {
-                showLeadSuccessState();
-            }
-        }
-
-        function getLocalCount(key) {
-            const value = Number(localStorage.getItem(key));
-            return Number.isFinite(value) && value >= 0 ? value : 0;
-        }
-
-        function incrementLocalCount(key) {
-            const nextValue = getLocalCount(key) + 1;
-            localStorage.setItem(key, String(nextValue));
-            return nextValue;
-        }
-
-        function appendOwnerSignupLog() {
-            const existing = JSON.parse(localStorage.getItem(OWNER_SIGNUPS_LOG_KEY) || "[]");
-            existing.push({
-                createdAt: new Date().toISOString(),
-                variant: "single"
-            });
-            localStorage.setItem(OWNER_SIGNUPS_LOG_KEY, JSON.stringify(existing));
-        }
-
-        function markRemoteCounterUnavailable() {
-            remoteCounterDisabled = true;
-            if (!remoteCounterWarned) {
-                console.warn("Counter service unavailable. Falling back to local counters in this session.");
-                remoteCounterWarned = true;
-            }
-        }
-
-        async function fetchWithTimeout(url, timeoutMs) {
-            const controller = new AbortController();
-            const timeoutId = setTimeout(function () {
-                controller.abort();
-            }, timeoutMs);
-
-            try {
-                return await fetch(url, { signal: controller.signal });
-            } finally {
-                clearTimeout(timeoutId);
-            }
-        }
-
-        async function callCounterApi(action, key) {
-            if (remoteCounterDisabled) {
-                return null;
-            }
-
-            const candidates = [remoteCounterBase].concat(
-                COUNTER_BASE_CANDIDATES.filter(function (base) {
-                    return base !== remoteCounterBase;
-                })
-            );
-
-            for (const base of candidates) {
-                try {
-                    const response = await fetchWithTimeout(`${base}/${action}/${COUNTER_NAMESPACE}/${key}`, 3500);
-                    if (!response.ok) {
-                        continue;
-                    }
-
-                    const data = await response.json();
-                    remoteCounterBase = base;
-                    return Number(data.value || 0);
-                } catch (error) {
-                    // Try next endpoint candidate.
-                }
-            }
-
-            markRemoteCounterUnavailable();
-            return null;
-        }
-
-        async function safeGetCounterValue(key) {
-            return await callCounterApi("get", key);
-        }
-
-        async function safeHitCounter(key) {
-            return await callCounterApi("hit", key);
-        }
-
-        async function refreshCounters() {
-            const signups = await safeGetCounterValue(SIGNUPS_KEY);
-            const localSignups = getLocalCount(LOCAL_SIGNUPS_KEY);
-            const finalSignups = signups === null ? localSignups : Math.max(signups, localSignups);
-            window.__carmaSignups = finalSignups;
-        }
-
-        function getTodayKey() {
-            return new Date().toISOString().slice(0, 10);
-        }
-
-        async function trackVisit() {
-            const todayKey = getTodayKey();
-            const lastTrackedDay = localStorage.getItem(VISIT_LAST_TRACKED_DAY_KEY);
-            if (lastTrackedDay === todayKey) {
-                return;
-            }
-
-            incrementLocalCount(LOCAL_VISITS_KEY);
-            localStorage.setItem(VISIT_LAST_TRACKED_DAY_KEY, todayKey);
-
-            await safeHitCounter(VISITS_KEY);
-        }
-
-        async function trackSignup() {
-            const localValue = incrementLocalCount(LOCAL_SIGNUPS_KEY);
-            const value = await safeHitCounter(SIGNUPS_KEY);
-            const finalValue = value !== null ? value : localValue;
-            window.__carmaSignups = finalValue;
-            refreshCounters();
-            return value;
-        }
-
-        async function sendLeadToWebhook(email) {
-            if (!LEAD_WEBHOOK_URL) return;
-
-            const response = await fetch(LEAD_WEBHOOK_URL, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    email,
-                    source: "landing-page",
-                    consentedDataSharing: true,
-                    createdAt: new Date().toISOString()
-                })
-            });
-
-            if (!response.ok) {
-                throw new Error("Webhook failed");
-            }
-        }
-
-        async function sendLeadToSheets(email) {
-            const formData = new FormData();
-            formData.append("email", email);
-
-            const response = await fetch(LEADS_SHEETS_SCRIPT_URL, {
-                method: "POST",
-                body: formData,
-                redirect: "follow"
-            });
-
-            // Some Apps Script deployments can return an opaque response after redirects.
-            if (response.type !== "opaque" && !response.ok) {
-                throw new Error("Sheets submit failed");
-            }
-        }
-
-        function setMessage(type, text) {
-            formMsg.className = "mt-4 rounded-xl px-4 py-3 text-sm font-bold";
-
-            if (type === "success") {
-                formMsg.classList.add("bg-emerald-50", "text-emerald-700", "border", "border-emerald-200");
-            } else {
-                formMsg.classList.add("bg-rose-50", "text-rose-700", "border", "border-rose-200");
-            }
-
-            formMsg.textContent = text;
-            formMsg.classList.remove("hidden");
-        }
-
-        function setInputState(valid) {
-            emailWrap.classList.remove("border-slate-300", "border-emerald-300", "border-rose-300", "error-shake");
-
-            if (valid) {
-                emailWrap.classList.add("border-emerald-300");
-            } else {
-                emailWrap.classList.add("border-rose-300", "error-shake");
-            }
-        }
-
-        leadForm.addEventListener("submit", function (event) {
-            event.preventDefault();
-            const value = emailInput.value.trim();
-
-            if (!emailRegex.test(value)) {
-                setInputState(false);
-                setMessage("error", "נא להזין כתובת אימייל תקינה כדי להמשיך.");
-                emailInput.focus();
-                return;
-            }
-
-            if (!consentInput.checked) {
-                setInputState(false);
-                setMessage("error", "כדי להצטרף לפיילוט צריך לאשר את תנאי ההצטרפות והפרטיות.");
-                consentInput.focus();
-                return;
-            }
-
-            setInputState(true);
-
-            const submitButton = leadForm.querySelector('button[type="submit"]');
-            const originalButtonText = submitButton.textContent;
-            submitButton.textContent = "שולח...";
-            submitButton.disabled = true;
-
-            Promise.allSettled([
-                trackSignup(),
-                sendLeadToWebhook(value),
-                sendLeadToSheets(value)
-            ]).then(function (results) {
-                const webhookEnabled = Boolean(LEAD_WEBHOOK_URL);
-                const webhookFailed = webhookEnabled && results[1].status === "rejected";
-                const sheetsFailed = results[2].status === "rejected";
-
-                if (sheetsFailed) {
-                    setMessage("error", "לא הצלחנו לשמור את הפרטים כרגע. אפשר לנסות שוב בעוד רגע.");
-                    return;
-                }
-
-                if (typeof gtag !== "undefined") {
-                    gtag("event", "sign_up", {
-                        method: "lead_form"
-                    });
-                }
-
-                setMessage("success", webhookFailed
-                    ? "נרשמתם בהצלחה. ייתכן שעיבוד הנתונים יתעדכן בעיכוב קצר."
-                    : "מעולה. נרשמתם לפיילוט של Carma.");
-                leadForm.reset();
-                appendOwnerSignupLog();
-                sessionStorage.setItem(LEAD_SUCCESS_SESSION_KEY, "1");
-                showLeadSuccessState();
-                console.log("Lead captured:", value);
-            }).finally(function () {
-                submitButton.textContent = originalButtonText;
-                submitButton.disabled = false;
-            });
-        });
-
-        shareCta.addEventListener("click", async function () {
-            const shareText = "הצטרפתי לפיילוט של Carma. אם גם לך מתאים להרוויח מנהיגה בטוחה, שווה להירשם.";
-            const shareUrl = window.location.href;
-
-            if (navigator.share) {
-                try {
-                    await navigator.share({ text: shareText, url: shareUrl });
-                    return;
-                } catch (error) {
-                    console.log("Native share cancelled or failed", error);
-                }
-            }
-
-            const fallbackText = `${shareText} ${shareUrl}`;
-            if (navigator.clipboard && window.isSecureContext) {
-                try {
-                    await navigator.clipboard.writeText(fallbackText);
-                    alert("הקישור הועתק. אפשר לשתף אותו בוואטסאפ או בכל ערוץ אחר.");
-                    return;
-                } catch (error) {
-                    console.log("Clipboard write failed", error);
-                }
-            }
-
-            prompt("העתיקו את הטקסט לשיתוף:", fallbackText);
-        });
-
-        window.carmaOwner = {
-            getSignupsLog: function () {
-                return JSON.parse(localStorage.getItem(OWNER_SIGNUPS_LOG_KEY) || "[]");
-            },
-            getLocalCounters: function () {
-                return {
-                    visits: getLocalCount(LOCAL_VISITS_KEY),
-                    signups: getLocalCount(LOCAL_SIGNUPS_KEY)
-                };
-            },
-            getServerCounters: async function () {
-                const visits = await safeGetCounterValue(VISITS_KEY);
-                const signups = await safeGetCounterValue(SIGNUPS_KEY);
-                return {
-                    remoteAvailable: !remoteCounterDisabled,
-                    visits,
-                    signups,
-                    local: {
-                        visits: getLocalCount(LOCAL_VISITS_KEY),
-                        signups: getLocalCount(LOCAL_SIGNUPS_KEY)
-                    }
-                };
-            },
-            clearLocalCounters: function () {
-                localStorage.removeItem(LOCAL_VISITS_KEY);
-                localStorage.removeItem(LOCAL_SIGNUPS_KEY);
-                localStorage.removeItem(VISIT_LAST_TRACKED_DAY_KEY);
-                refreshCounters();
-            }
-        };
-
-        initializeLeadSuccessState();
-        trackVisit().finally(function () {
-            refreshCounters();
-        });
-    </script>
+    <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
