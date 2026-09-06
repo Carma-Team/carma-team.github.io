@@ -17,6 +17,11 @@
     <meta property="og:title" content="Carma | נהיגה בטוחה שמתגמלת אתכם">
     <meta property="og:description" content="נהיגה בטוחה טובה לכולם. היא צריכה לתגמל גם את הנהג. הכירו את Carma.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://carma-team.github.io/carma-mvp/">
+    <meta property="og:image" content="https://carma-team.github.io/carma-mvp/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="/mark.svg" type="image/svg+xml">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -161,12 +166,12 @@
                             <strong>הטלפון</strong>
                             <span>GPS · תאוצה · ג׳ירוסקופ</span>
                         </div>
-                        <div class="pipeline-arrow" aria-hidden="true">→</div>
+                        <div class="pipeline-arrow" aria-hidden="true">←</div>
                         <div class="pipeline-node">
                             <strong>השרת</strong>
                             <span>זיהוי אירועים מחדש מנתוני GPS</span>
                         </div>
-                        <div class="pipeline-arrow" aria-hidden="true">→</div>
+                        <div class="pipeline-arrow" aria-hidden="true">←</div>
                         <div class="pipeline-node">
                             <strong>הציון</strong>
                             <span>שקלול 5 התנהגויות, 0–100</span>
@@ -176,7 +181,7 @@
                     <div class="callouts">
                         <article class="callout">
                             <h3>שני גלאים, תוצאה אחת</h3>
-                            <p>אירועים מזוהים בזמן אמת בטלפון, וגם מחדש בשרת מנתוני ה-GPS. הציון הסופי לוקח את הגבוה מבין השניים — כך שלקוח שעבר מניפולציה אף פעם לא יכול להוריד את הציון.</p>
+                            <p>אירועים מזוהים בזמן אמת בטלפון, וגם מחדש בשרת מנתוני ה-GPS. כל אירוע שהשרת מזהה ומהטלפון פספס — נספר. כך שלקוח שעבר מניפולציה אף פעם לא יכול להוריד את מספר האירועים שנספרים נגדו.</p>
                         </article>
                         <article class="callout">
                             <h3>קצב, לא סכום</h3>
@@ -224,6 +229,10 @@
                         <p class="join-sub">השאירו מייל ונעדכן אתכם בהשקה הרשמית ובהטבות חדשות.</p>
 
                         <form id="lead-form" novalidate>
+                            <div class="hp-field" aria-hidden="true">
+                                <label for="website">Website</label>
+                                <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+                            </div>
                             <div id="email-wrap" class="email-wrap">
                                 <label for="email" class="sr-only">כתובת אימייל</label>
                                 <input
@@ -251,7 +260,7 @@
                             <p id="form-msg" class="form-msg hidden" role="status" aria-live="polite"></p>
                         </form>
 
-                        <div id="lead-success" class="lead-success hidden">
+                        <div id="lead-success" class="lead-success hidden" role="status" aria-live="polite" tabindex="-1">
                             <p class="headline">תודה שהצטרפתם!</p>
                             <p>קיבלנו את הפרטים שלכם ונעדכן במייל כשיהיו חדשות.</p>
                             <button id="share-cta" type="button" class="btn btn-primary">שתפו חבר או חברה</button>

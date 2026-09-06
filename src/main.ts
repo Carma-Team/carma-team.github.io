@@ -15,14 +15,33 @@ const consentInput = document.querySelector<HTMLInputElement>("#consent")!;
 const formMsg = document.querySelector<HTMLParagraphElement>("#form-msg")!;
 const leadSuccess = document.querySelector<HTMLDivElement>("#lead-success")!;
 const shareCta = document.querySelector<HTMLButtonElement>("#share-cta")!;
+const honeypot = document.querySelector<HTMLInputElement>("#website")!;
 
 function showLeadSuccessState() {
     leadForm.classList.add("hidden");
     leadSuccess.classList.remove("hidden");
+    leadSuccess.focus();
 }
 
-if (sessionStorage.getItem(LEAD_SUCCESS_SESSION_KEY) === "1") {
-    showLeadSuccessState();
+function readSuccessFlag(): boolean {
+    try {
+        return sessionStorage.getItem(LEAD_SUCCESS_SESSION_KEY) === "1";
+    } catch {
+        return false;
+    }
+}
+
+function writeSuccessFlag() {
+    try {
+        sessionStorage.setItem(LEAD_SUCCESS_SESSION_KEY, "1");
+    } catch {
+        // storage unavailable; success state just won't persist across reloads
+    }
+}
+
+if (readSuccessFlag()) {
+    leadForm.classList.add("hidden");
+    leadSuccess.classList.remove("hidden");
 }
 
 function setMessage(type: "success" | "error", text: string) {
@@ -52,6 +71,11 @@ async function sendLeadToSheets(email: string) {
 
 leadForm.addEventListener("submit", (event) => {
     event.preventDefault();
+
+    if (honeypot.value.trim() !== "") {
+        return;
+    }
+
     const value = emailInput.value.trim();
 
     if (!emailRegex.test(value)) {
@@ -81,7 +105,7 @@ leadForm.addEventListener("submit", (event) => {
                 gtag("event", "sign_up", { method: "lead_form" });
             }
             leadForm.reset();
-            sessionStorage.setItem(LEAD_SUCCESS_SESSION_KEY, "1");
+            writeSuccessFlag();
             showLeadSuccessState();
         })
         .catch(() => {
@@ -101,8 +125,11 @@ shareCta.addEventListener("click", async () => {
         try {
             await navigator.share({ text: shareText, url: shareUrl });
             return;
-        } catch {
-            // user cancelled or share failed; fall through to clipboard
+        } catch (err) {
+            if (err instanceof DOMException && err.name === "AbortError") {
+                return;
+            }
+            // real share failure; fall through to clipboard
         }
     }
 
