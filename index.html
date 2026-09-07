@@ -78,9 +78,8 @@
                 </a>
 
                 <div class="nav-links">
-                    <a href="#why">למה זה חשוב</a>
                     <a href="#product">האפליקציה</a>
-                    <a href="#tech">איך זה עובד</a>
+                    <a href="#solution">איך זה עובד</a>
                     <a href="#faq">שאלות נפוצות</a>
                 </div>
 
@@ -90,7 +89,7 @@
 
         <main id="main-content">
             <!-- HERO -->
-            <section class="hero" id="why">
+            <section class="hero">
                 <div class="hero-ring" aria-hidden="true"></div>
                 <div class="container hero-grid">
                     <div class="hero-copy">
@@ -104,7 +103,7 @@
 
                         <div class="hero-actions">
                             <a href="#join" class="btn btn-primary">הצטרפו לעדכונים</a>
-                            <a href="#tech" class="btn btn-ghost">איך זה עובד</a>
+                            <a href="#solution" class="btn btn-ghost">איך זה עובד</a>
                         </div>
                     </div>
 
@@ -116,9 +115,38 @@
                 </div>
             </section>
 
-            <!-- BRIDGE + THREE QUESTIONS -->
-            <section class="bridge">
+            <!-- PROBLEM -->
+            <section class="problem" id="problem">
                 <div class="container">
+                    <div class="section-head">
+                        <span class="eyebrow">הבעיה</span>
+                        <h2 class="headline">הכבישים בישראל לא בטוחים כמו שהם צריכים להיות</h2>
+                    </div>
+
+                    <div class="stat-grid">
+                        <article class="stat-card">
+                            <span class="stat-num">459</span>
+                            <p>הרוגים בתאונות דרכים בישראל ב-2025</p>
+                            <span class="stat-source">אור ירוק · הלשכה המרכזית לסטטיסטיקה</span>
+                        </article>
+                        <article class="stat-card">
+                            <span class="stat-num">93%</span>
+                            <p>מתאונות הדרכים מיוחסות להתנהגות הנהג, לא לרכב</p>
+                            <span class="stat-source">הרשות הלאומית לבטיחות בדרכים</span>
+                        </article>
+                        <article class="stat-card stat-card-accent">
+                            <span class="stat-num" dir="ltr">-35%</span>
+                            <p>שימוש בטלפון ברגע שנהגים רואים את הציון שלהם</p>
+                            <span class="stat-source">Cambridge Mobile Telematics · זה בדיוק מה ש-Carma בנויה לעשות</span>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CHALLENGE (BRIDGE + THREE QUESTIONS) -->
+            <section class="bridge" id="challenge">
+                <div class="container">
+                    <span class="eyebrow eyebrow-center">האתגר</span>
                     <p class="bridge-line">אז למה כל כך קשה לשמור על נהיגה בטוחה לאורך זמן?</p>
 
                     <div class="question-grid">
@@ -134,6 +162,30 @@
                             <span class="question-tag">מוטיבציה</span>
                             <p>למה כדאי להמשיך לנהוג טוב יותר?</p>
                         </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SOLUTION -->
+            <section class="solution" id="solution">
+                <div class="container solution-grid">
+                    <div class="solution-copy">
+                        <span class="eyebrow">הפתרון</span>
+                        <h2 class="headline">הרעיון פשוט: נוהגים בטוח, מקבלים תגמול.</h2>
+                        <p>
+                            אפליקציה שמשפרת הרגלי נהיגה וגורמת לנהגים לרצות לנהוג טוב יותר. היא משתמשת בחיישנים
+                            שכבר נמצאים בטלפון, מזהה את אופן הנהיגה, מעניקה ציון, ולפי הציון הנהג מקבל נקודות
+                            שאותן אפשר לממש כהטבות והנחות בבתי עסק שונים.
+                        </p>
+                    </div>
+
+                    <div class="solution-video">
+                        <div class="video-frame" id="demo-video-frame">
+                            <img src="/video/carma-demo-poster.webp" alt="תצוגה מקדימה של סרטון הדגמת האפליקציה" class="video-poster" loading="lazy" width="1280" height="720">
+                            <button type="button" class="video-play-btn" id="demo-video-play" aria-label="הפעילו את סרטון ההדגמה">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -185,28 +237,82 @@
                 </div>
             </section>
 
-            <!-- HOW IT WORKS (TECH) -->
+            <!-- VALIDATION (NISUY) -->
+            <section class="validation" id="validation">
+                <div class="container">
+                    <div class="section-head">
+                        <span class="eyebrow">ניסוי</span>
+                        <h2 class="headline">ניסוי בעולם האמיתי, לא רק במעבדה</h2>
+                        <p class="validation-method">
+                            12 נסיעות מתויגות · 10 חזרות על אותו מסלול · 4 נהגים · 2 דגמי טלפון · 186 ק״מ, עירוני ובין-עירוני.
+                            כל אירוע תויג ידנית והושווה למה ש-Carma זיהתה.
+                        </p>
+                    </div>
+
+                    <div class="metric-strip validation-grid">
+                        <div class="metric">
+                            <span class="metric-num">89%</span>
+                            <span class="metric-cap">שיעור זיהוי אירועים, בכל חמש ההתנהגויות הנמדדות</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-num">1.6</span>
+                            <span class="metric-cap">שיעור אזעקות שווא ל-100 ק״מ נהיגה</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-num">±3 נק'</span>
+                            <span class="metric-cap">עקביות ציון, פיזור מקסימלי לאורך 10 חזרות על אותו מסלול</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-num">6%</span>
+                            <span class="metric-cap">צריכת סוללה לשעת נהיגה, מסך כבוי וכל החיישנים פעילים</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TEAM -->
+            <section class="team" id="team">
+                <div class="container">
+                    <div class="section-head">
+                        <span class="eyebrow">מי אנחנו</span>
+                        <h2 class="headline">הצוות מאחורי Carma</h2>
+                    </div>
+
+                    <div class="team-grid">
+                        <article class="team-card">
+                            <img src="/team/dan.webp" alt="דן אופרי" class="team-avatar" loading="lazy" width="120" height="120">
+                            <span class="team-name">דן אופרי</span>
+                            <span class="team-role">CPO</span>
+                            <p>נוסחת הציון, מפת הדרכים, מנגנוני אנטי-רמאות ואבטחת האפליקציה.</p>
+                        </article>
+                        <article class="team-card">
+                            <img src="/team/naveh.webp" alt="נווה צביג" class="team-avatar" loading="lazy" width="120" height="120">
+                            <span class="team-name">נווה צביג</span>
+                            <span class="team-role">CTO</span>
+                            <p>מסד הנתונים, התשתיות, ה-CI/CD ושלמות המערכת כולה.</p>
+                        </article>
+                        <article class="team-card">
+                            <img src="/team/shaun.webp" alt="שון פייבר" class="team-avatar" loading="lazy" width="120" height="120">
+                            <span class="team-name">שון פייבר</span>
+                            <span class="team-role">CEO</span>
+                            <p>נקודות הקצה העסקיות של המוצר והאינטגרציות מול צד שלישי.</p>
+                        </article>
+                        <article class="team-card">
+                            <img src="/team/may.webp" alt="מאי חג'בי" class="team-avatar" loading="lazy" width="120" height="120">
+                            <span class="team-name">מאי חג'בי</span>
+                            <span class="team-role">Mobile & Frontend Lead</span>
+                            <p>מסכי האפליקציה, ה-UI וה-Driving SDK שאוסף את נתוני החיישנים.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HOW IT WORKS (ALGORITHM) -->
             <section class="tech" id="tech">
                 <div class="container">
                     <div class="section-head">
-                        <h2 class="eyebrow">איך זה עובד מאחורי הקלעים</h2>
-                    </div>
-
-                    <div class="pipeline" role="img" aria-label="תרשים זרימה: הטלפון אוסף GPS ותנועה, השרת מזהה מחדש ומשקלל ציון">
-                        <div class="pipeline-node">
-                            <strong>הטלפון</strong>
-                            <span>GPS · תאוצה · ג׳ירוסקופ</span>
-                        </div>
-                        <div class="pipeline-arrow" aria-hidden="true">←</div>
-                        <div class="pipeline-node">
-                            <strong>השרת</strong>
-                            <span>זיהוי אירועים מחדש מנתוני GPS</span>
-                        </div>
-                        <div class="pipeline-arrow" aria-hidden="true">←</div>
-                        <div class="pipeline-node">
-                            <strong>הציון</strong>
-                            <span>שקלול 5 התנהגויות, 0–100</span>
-                        </div>
+                        <span class="eyebrow">האלגוריתם</span>
+                        <h2 class="headline">איך זה עובד מאחורי הקלעים</h2>
                     </div>
 
                     <div class="callouts">
@@ -232,21 +338,6 @@
                             <span style="flex:20" class="w3">בלימה חדה 20%</span>
                             <span style="flex:15" class="w4">האצה 15%</span>
                             <span style="flex:10" class="w5">סיבוב 10%</span>
-                        </div>
-                    </div>
-
-                    <div class="stack-row">
-                        <div class="stack-group">
-                            <span class="stack-title">אפליקציה חלקה</span>
-                            <span>React Native · Expo · TypeScript</span>
-                        </div>
-                        <div class="stack-group">
-                            <span class="stack-title">שרת מהיר ואמין</span>
-                            <span>Python · FastAPI · PostgreSQL</span>
-                        </div>
-                        <div class="stack-group">
-                            <span class="stack-title">אבטחה ברמת ענן</span>
-                            <span>Azure Container Apps · GitHub Actions</span>
                         </div>
                     </div>
                 </div>

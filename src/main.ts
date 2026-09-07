@@ -43,6 +43,26 @@ if (cookieBanner && cookieAccept && cookieDecline) {
     });
 }
 
+const demoVideoFrame = document.querySelector<HTMLDivElement>("#demo-video-frame");
+const demoVideoPlay = document.querySelector<HTMLButtonElement>("#demo-video-play");
+
+if (demoVideoFrame && demoVideoPlay) {
+    demoVideoFrame.style.cursor = "pointer";
+    demoVideoFrame.addEventListener("click", () => {
+        demoVideoFrame.style.cursor = "default";
+        const video = document.createElement("video");
+        video.src = "/video/carma-demo.mp4";
+        video.controls = true;
+        video.playsInline = true;
+        video.tabIndex = -1;
+        demoVideoFrame.replaceChildren(video);
+        video.focus();
+        video.play().catch(() => {
+            // autoplay blocked; the native controls still let the viewer press play
+        });
+    }, { once: true });
+}
+
 const LEADS_SHEETS_SCRIPT_URL =
     "https://script.google.com/macros/s/AKfycbzc3Xvs-XsNStvFIbfu_ffNvpiQAzFwdVlDWeeySGWt4mcwzYgGCMQk7EE-vEENQ_Bc/exec";
 const LEAD_SUCCESS_SESSION_KEY = "carma_signup_completed";
