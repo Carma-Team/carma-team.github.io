@@ -462,6 +462,8 @@ body {
 
 .site-footer .brand-name { color: #334155; font-weight: 700; margin: 0 0 0.4rem; }
 
+.footer-link { color: var(--muted); }
+
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         animation: none !important;
