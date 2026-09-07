@@ -79,7 +79,7 @@ body {
     z-index: 60;
     background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--line);
+    box-shadow: 0 1px 0 var(--line), 0 12px 24px -16px rgba(15, 23, 42, 0.18);
 }
 
 .nav {
@@ -100,6 +100,30 @@ body {
 .nav-links { display: flex; gap: 1.75rem; }
 .nav-links a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
 .nav-links a:hover { color: var(--dark); }
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    font-weight: 700;
+    padding: 0.85rem 1.5rem;
+    text-decoration: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.btn-primary { background: var(--brand-600); color: #fff; box-shadow: var(--shadow-glow); }
+.btn-primary:hover { background: var(--brand-700); }
+
+.btn-ghost { border-color: #cbd5e1; color: #334155; background: transparent; }
+.btn-ghost:hover { border-color: #94a3b8; color: var(--dark); }
+
+.btn-sm { padding: 0.6rem 1.2rem; font-size: 0.9rem; border-radius: 999px; }
 
 .nav-actions {
     display: flex;
@@ -221,30 +245,6 @@ body {
         justify-content: center;
     }
 }
-
-/* Buttons */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 1rem;
-    font-weight: 700;
-    padding: 0.85rem 1.5rem;
-    text-decoration: none;
-    border: 1px solid transparent;
-    cursor: pointer;
-    transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
-    font-family: inherit;
-    font-size: 1rem;
-}
-
-.btn-primary { background: var(--brand-600); color: #fff; box-shadow: var(--shadow-glow); }
-.btn-primary:hover { background: var(--brand-700); }
-
-.btn-ghost { border-color: #cbd5e1; color: #334155; background: transparent; }
-.btn-ghost:hover { border-color: #94a3b8; color: var(--dark); }
-
-.btn-sm { padding: 0.6rem 1.2rem; font-size: 0.9rem; border-radius: 999px; }
 
 /* Hero */
 .hero { position: relative; overflow: hidden; padding: 3rem 0 4rem; }
@@ -475,7 +475,6 @@ body {
     aspect-ratio: 1 / 1;
     border-radius: 9999px;
     object-fit: cover;
-    object-position: 50% 20%;
     margin: 0 auto 1rem;
     border: 3px solid #fff;
     box-shadow: 0 0 0 1px var(--line);
