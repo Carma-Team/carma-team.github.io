@@ -111,9 +111,11 @@ body {
         overflow-x: auto;
         flex-wrap: nowrap;
         scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 0.2rem;
     }
     .nav-links::-webkit-scrollbar { display: none; }
-    .nav-links a { font-size: 0.85rem; white-space: nowrap; }
+    .nav-links a { font-size: 0.85rem; white-space: nowrap; padding-block: 0.25rem; }
 }
 
 /* Buttons */
