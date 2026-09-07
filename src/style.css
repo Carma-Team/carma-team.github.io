@@ -76,7 +76,7 @@ body {
 .site-header {
     position: sticky;
     top: 0;
-    z-index: 40;
+    z-index: 60;
     background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--line);
@@ -191,12 +191,14 @@ body {
         flex-direction: column;
         gap: 1.25rem;
         box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
-        transition: inset-inline-end 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        visibility: hidden;
+        transition: inset-inline-end 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s ease;
         z-index: 50;
         overflow-y: auto;
     }
     .nav-links.active {
         inset-inline-end: 0;
+        visibility: visible;
     }
 
     .nav-links a {
