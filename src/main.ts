@@ -43,6 +43,20 @@ if (cookieBanner && cookieAccept && cookieDecline) {
     });
 }
 
+const demoVideoFrame = document.querySelector<HTMLDivElement>("#demo-video-frame");
+const demoVideoPlay = document.querySelector<HTMLButtonElement>("#demo-video-play");
+
+if (demoVideoFrame && demoVideoPlay) {
+    demoVideoPlay.addEventListener("click", () => {
+        const video = document.createElement("video");
+        video.src = "/video/carma-demo.mp4";
+        video.controls = true;
+        video.autoplay = true;
+        video.playsInline = true;
+        demoVideoFrame.replaceChildren(video);
+    });
+}
+
 const LEADS_SHEETS_SCRIPT_URL =
     "https://script.google.com/macros/s/AKfycbzc3Xvs-XsNStvFIbfu_ffNvpiQAzFwdVlDWeeySGWt4mcwzYgGCMQk7EE-vEENQ_Bc/exec";
 const LEAD_SUCCESS_SESSION_KEY = "carma_signup_completed";
