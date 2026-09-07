@@ -72,12 +72,14 @@
     <a href="#main-content" class="skip-link">דלגו לתוכן הראשי</a>
     <div class="page">
         <header class="site-header">
-            <nav class="nav">
+            <nav class="nav" aria-label="ניווט ראשי">
                 <a href="#" class="brand">
                     <img src="/logo.svg" alt="Carma" class="brand-logo" width="156" height="32">
                 </a>
 
-                <div class="nav-links">
+                <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+
+                <div class="nav-links" id="nav-menu">
                     <a href="#problem">הבעיה</a>
                     <a href="#challenge">האתגר</a>
                     <a href="#solution">הפתרון</a>
@@ -85,9 +87,17 @@
                     <a href="#team">מי אנחנו</a>
                     <a href="#tech">האלגוריתם</a>
                     <a href="#faq">שאלות נפוצות</a>
+                    <a href="#join" class="btn btn-primary btn-mobile-cta">הצטרפו לעדכונים</a>
                 </div>
 
-                <a href="#join" class="btn btn-primary btn-sm">הצטרפו לעדכונים</a>
+                <div class="nav-actions">
+                    <a href="#join" class="btn btn-primary btn-sm nav-desktop-cta">הצטרפו לעדכונים</a>
+                    <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="פתח תפריט ניווט">
+                        <span class="hamburger-bar"></span>
+                        <span class="hamburger-bar"></span>
+                        <span class="hamburger-bar"></span>
+                    </button>
+                </div>
             </nav>
         </header>
 
