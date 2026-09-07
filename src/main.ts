@@ -49,6 +49,7 @@ const demoVideoPlay = document.querySelector<HTMLButtonElement>("#demo-video-pla
 if (demoVideoFrame && demoVideoPlay) {
     demoVideoFrame.style.cursor = "pointer";
     demoVideoFrame.addEventListener("click", () => {
+        demoVideoFrame.style.cursor = "default";
         const video = document.createElement("video");
         video.src = "/video/carma-demo.mp4";
         video.controls = true;
@@ -59,7 +60,7 @@ if (demoVideoFrame && demoVideoPlay) {
         video.play().catch(() => {
             // autoplay blocked; the native controls still let the viewer press play
         });
-    });
+    }, { once: true });
 }
 
 const LEADS_SHEETS_SCRIPT_URL =
