@@ -44,7 +44,7 @@ body {
     position: absolute;
     inset-inline-start: 1rem;
     top: -3rem;
-    z-index: 50;
+    z-index: 70;
     background: var(--brand-600);
     color: #fff;
     padding: 0.75rem 1.25rem;
