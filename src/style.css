@@ -315,7 +315,7 @@ body {
 
 .validation-grid { margin-top: 1rem; }
 
-@media (min-width: 768px) { .validation-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 768px) { .metric-strip.validation-grid { grid-template-columns: repeat(4, 1fr); } }
 
 /* Team */
 .team { padding: 4rem 0; border-top: 1px solid var(--line); background: rgba(255,255,255,0.6); }
