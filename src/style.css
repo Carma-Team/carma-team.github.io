@@ -93,7 +93,8 @@ body {
     gap: 1rem;
 }
 
-.brand { display: flex; align-items: center; gap: 0.65rem; text-decoration: none; color: inherit; }
+.brand { display: flex; align-items: center; text-decoration: none; color: inherit; }
+.brand-logo { display: block; height: 32px; width: auto; }
 .brand-name { font-family: "Heebo", sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--dark); }
 
 .nav-links { display: flex; gap: 1.75rem; }
