@@ -223,3 +223,47 @@ shareCta.addEventListener("click", async () => {
 
     prompt("העתיקו את הטקסט לשיתוף:", fallbackText);
 });
+
+// Mobile Navigation Drawer
+const navToggle = document.querySelector<HTMLButtonElement>("#nav-toggle");
+const navMenu = document.querySelector<HTMLDivElement>("#nav-menu");
+const navBackdrop = document.querySelector<HTMLDivElement>("#nav-backdrop");
+
+function setMenuState(open: boolean) {
+    if (!navToggle || !navMenu || !navBackdrop) return;
+    navToggle.setAttribute("aria-expanded", String(open));
+    navToggle.setAttribute("aria-label", open ? "סגור תפריט ניווט" : "פתח תפריט ניווט");
+    navMenu.classList.toggle("active", open);
+    navBackdrop.classList.toggle("active", open);
+    document.body.style.overflow = open ? "hidden" : "";
+}
+
+if (navToggle && navMenu && navBackdrop) {
+    navToggle.addEventListener("click", () => {
+        const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+        setMenuState(!isOpen);
+    });
+
+    navBackdrop.addEventListener("click", () => {
+        setMenuState(false);
+    });
+
+    navMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+            setMenuState(false);
+        });
+    });
+
+    window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && navMenu.classList.contains("active")) {
+            setMenuState(false);
+            navToggle.focus();
+        }
+    });
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 900 && navMenu.classList.contains("active")) {
+            setMenuState(false);
+        }
+    });
+}
