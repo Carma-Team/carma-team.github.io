@@ -2,10 +2,16 @@
 <html lang="he" dir="rtl">
 <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8C0VTCCGF"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            analytics_storage: 'denied',
+            ad_storage: 'denied'
+        });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8C0VTCCGF"></script>
+    <script>
         gtag('js', new Date());
         gtag('config', 'G-M8C0VTCCGF');
     </script>
@@ -21,28 +27,53 @@
     <meta property="og:image" content="https://carma-team.github.io/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="he_IL">
+    <meta property="og:site_name" content="Carma">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Carma | נהיגה בטוחה שמתגמלת אתכם">
+    <meta name="twitter:description" content="נהיגה בטוחה טובה לכולם. היא צריכה לתגמל גם את הנהג. הכירו את Carma.">
+    <meta name="twitter:image" content="https://carma-team.github.io/og-image.png">
     <link rel="canonical" href="https://carma-team.github.io/">
     <link rel="icon" href="/mark.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Heebo:wght@500;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&display=swap"
         rel="stylesheet"
         media="print"
         onload="this.media='all'"
     >
     <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Heebo:wght@500;700;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&display=swap" rel="stylesheet">
     </noscript>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "Carma",
+        "url": "https://carma-team.github.io/",
+        "description": "אפליקציה שמנטרת נהיגה בזמן אמת ומתרגמת נהיגה בטוחה לנקודות שממירים להטבות.",
+        "applicationCategory": "LifestyleApplication",
+        "operatingSystem": "iOS, Android",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "ILS"
+        }
+    }
+    </script>
 </head>
 <body class="antialiased">
+    <a href="#main-content" class="skip-link">דלגו לתוכן הראשי</a>
     <div class="page">
         <header class="site-header">
             <nav class="nav">
                 <a href="#" class="brand">
-                    <img src="/mark.svg" alt="" class="brand-mark" width="36" height="36">
+                    <img src="/mark.svg" alt="" class="brand-mark" width="32" height="36">
                     <span class="brand-name">Carma</span>
                 </a>
 
@@ -50,13 +81,14 @@
                     <a href="#why">למה זה חשוב</a>
                     <a href="#product">האפליקציה</a>
                     <a href="#tech">איך זה עובד</a>
+                    <a href="#faq">שאלות נפוצות</a>
                 </div>
 
                 <a href="#join" class="btn btn-primary btn-sm">הצטרפו לעדכונים</a>
             </nav>
         </header>
 
-        <main>
+        <main id="main-content">
             <!-- HERO -->
             <section class="hero" id="why">
                 <div class="hero-ring" aria-hidden="true"></div>
@@ -73,14 +105,14 @@
                         </p>
 
                         <div class="hero-actions">
-                            <a href="#tech" class="btn btn-ghost">איך זה עובד</a>
                             <a href="#join" class="btn btn-primary">הצטרפו לעדכונים</a>
+                            <a href="#tech" class="btn btn-ghost">איך זה עובד</a>
                         </div>
                     </div>
 
                     <div class="hero-visual">
                         <div class="phone-frame float">
-                            <img src="/shots/drive.webp" alt="מסך הבית של אפליקציית Carma עם ציון נהיגה וסיכום נסיעות" loading="eager">
+                            <img src="/shots/drive.webp" alt="מסך הבית של אפליקציית Carma עם ציון נהיגה וסיכום נסיעות" width="640" height="1372" loading="eager">
                         </div>
                     </div>
                 </div>
@@ -148,8 +180,8 @@
                             <span class="metric-cap">התנהגויות נהיגה נמדדות</span>
                         </div>
                         <div class="metric">
-                            <span class="metric-num">CMT DriveWell</span>
-                            <span class="metric-cap">אותן 5 התנהגויות שהתקן בתעשייה מודד</span>
+                            <span class="metric-num">תקן עולמי</span>
+                            <span class="metric-cap">לפי תקן הטלמטריה המוביל בעולם</span>
                         </div>
                     </div>
                 </div>
@@ -159,7 +191,7 @@
             <section class="tech" id="tech">
                 <div class="container">
                     <div class="section-head">
-                        <span class="eyebrow">איך זה עובד מאחורי הקלעים</span>
+                        <h2 class="eyebrow">איך זה עובד מאחורי הקלעים</h2>
                     </div>
 
                     <div class="pipeline" role="img" aria-label="תרשים זרימה: הטלפון אוסף GPS ותנועה, השרת מזהה מחדש ומשקלל ציון">
@@ -182,7 +214,7 @@
                     <div class="callouts">
                         <article class="callout">
                             <h3>שני גלאים, תוצאה אחת</h3>
-                            <p>אירועים מזוהים בזמן אמת בטלפון, וגם מחדש בשרת מנתוני ה-GPS. כל אירוע שהשרת מזהה והטלפון פספס — נספר. כך שלקוח שעבר מניפולציה אף פעם לא יכול להוריד את מספר האירועים שנספרים נגדו.</p>
+                            <p>כל אירוע נבדק פעמיים — גם בטלפון וגם בשרת מנתוני ה-GPS — כדי שהציון שלכם יהיה מדויק ואמין תמיד, גם אם משהו בטלפון מפספס.</p>
                         </article>
                         <article class="callout">
                             <h3>קצב, לא סכום</h3>
@@ -207,17 +239,45 @@
 
                     <div class="stack-row">
                         <div class="stack-group">
-                            <span class="stack-title">מובייל</span>
+                            <span class="stack-title">אפליקציה חלקה</span>
                             <span>React Native · Expo · TypeScript</span>
                         </div>
                         <div class="stack-group">
-                            <span class="stack-title">שרת</span>
+                            <span class="stack-title">שרת מהיר ואמין</span>
                             <span>Python · FastAPI · PostgreSQL</span>
                         </div>
                         <div class="stack-group">
-                            <span class="stack-title">ענן ו-CI</span>
+                            <span class="stack-title">אבטחה ברמת ענן</span>
                             <span>Azure Container Apps · GitHub Actions</span>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section class="faq" id="faq">
+                <div class="container">
+                    <div class="section-head">
+                        <h2 class="headline">שאלות נפוצות</h2>
+                    </div>
+
+                    <div class="faq-list">
+                        <details class="faq-item">
+                            <summary>האם זה גומר לי סוללה?</summary>
+                            <p>לא. Carma רצה ברקע בצורה יעילה שדומה לניווט או לשליחת מיקום רגילה, ולא צורכת סוללה בצורה משמעותית מעבר לזה.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>מי רואה את הנתונים שלי?</summary>
+                            <p>רק אתם. הנתונים לא מועברים לחברות ביטוח, למעסיקים או לכל גורם חיצוני אחר.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>זה עולה כסף?</summary>
+                            <p>לא, האפליקציה חינמית.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>אילו הטבות אני מקבל?</summary>
+                            <p>נקודות על כל נסיעה בטוחה, שממירים להטבות אמיתיות בחנות שבתוך האפליקציה.</p>
+                        </details>
                     </div>
                 </div>
             </section>
@@ -253,7 +313,10 @@
 
                             <label for="consent" class="consent-row">
                                 <input id="consent" name="consent" type="checkbox" required>
-                                <span>אני מאשר/ת קבלת עדכונים ושמירה על פרטיות הנתונים שלי.</span>
+                                <span>
+                                    אני מאשר/ת קבלת עדכונים ומאשר/ת את
+                                    <a href="/privacy.html" target="_blank" rel="noopener">מדיניות הפרטיות</a>.
+                                </span>
                             </label>
 
                             <p class="join-note">רק עדכונים רלוונטיים, בלי ספאם.</p>
@@ -274,7 +337,23 @@
         <footer class="site-footer">
             <p class="brand-name">Carma 2026</p>
             <p>תנהגו בטוח. תרוויחו כל יום.</p>
+            <p>
+                <a href="/privacy.html" class="footer-link">מדיניות פרטיות</a>
+                ·
+                <a href="/accessibility.html" class="footer-link">הצהרת נגישות</a>
+            </p>
         </footer>
+    </div>
+
+    <div id="cookie-banner" class="cookie-banner hidden" role="dialog" aria-label="הסכמה לאיסוף נתוני שימוש">
+        <p>
+            האתר משתמש ב-Google Analytics כדי להבין איך משתמשים בו. אפשר לקרוא עוד ב
+            <a href="/privacy.html" target="_blank" rel="noopener">מדיניות הפרטיות</a>.
+        </p>
+        <div class="cookie-banner-actions">
+            <button id="cookie-decline" type="button" class="btn btn-ghost btn-sm">לא תודה</button>
+            <button id="cookie-accept" type="button" class="btn btn-primary btn-sm">מאשר/ת</button>
+        </div>
     </div>
 
     <script type="module" src="/src/main.ts"></script>

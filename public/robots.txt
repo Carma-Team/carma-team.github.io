@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://carma-team.github.io/sitemap.xml

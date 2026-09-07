@@ -2,6 +2,47 @@ import "./style.css";
 
 declare function gtag(...args: unknown[]): void;
 
+const CONSENT_KEY = "carma_analytics_consent";
+const cookieBanner = document.querySelector<HTMLDivElement>("#cookie-banner");
+const cookieAccept = document.querySelector<HTMLButtonElement>("#cookie-accept");
+const cookieDecline = document.querySelector<HTMLButtonElement>("#cookie-decline");
+
+function readConsentChoice(): string | null {
+    try {
+        return localStorage.getItem(CONSENT_KEY);
+    } catch {
+        return null;
+    }
+}
+
+function writeConsentChoice(value: "granted" | "denied") {
+    try {
+        localStorage.setItem(CONSENT_KEY, value);
+    } catch {
+        // storage unavailable; the choice just won't persist across visits
+    }
+}
+
+if (cookieBanner && cookieAccept && cookieDecline) {
+    const existingChoice = readConsentChoice();
+    if (existingChoice === "granted") {
+        gtag("consent", "update", { analytics_storage: "granted" });
+    } else if (existingChoice === null) {
+        cookieBanner.classList.remove("hidden");
+    }
+
+    cookieAccept.addEventListener("click", () => {
+        gtag("consent", "update", { analytics_storage: "granted" });
+        writeConsentChoice("granted");
+        cookieBanner.classList.add("hidden");
+    });
+
+    cookieDecline.addEventListener("click", () => {
+        writeConsentChoice("denied");
+        cookieBanner.classList.add("hidden");
+    });
+}
+
 const LEADS_SHEETS_SCRIPT_URL =
     "https://script.google.com/macros/s/AKfycbzc3Xvs-XsNStvFIbfu_ffNvpiQAzFwdVlDWeeySGWt4mcwzYgGCMQk7EE-vEENQ_Bc/exec";
 const LEAD_SUCCESS_SESSION_KEY = "carma_signup_completed";
