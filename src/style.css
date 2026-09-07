@@ -159,7 +159,7 @@ body {
     background: #fff;
 }
 
-.phone-frame img { display: block; width: 100%; height: auto; }
+.phone-frame img { display: block; width: 100%; height: auto; aspect-ratio: 640 / 1372; }
 
 .float { animation: float 6s ease-in-out infinite; }
 @keyframes float {
@@ -328,6 +328,14 @@ body {
 .w4 { background: #60a5fa; color: #0f172a; }
 .w5 { background: #93c5fd; color: #1e293b; }
 
+@media (max-width: 640px) {
+    .weights-bar {
+        flex-direction: column;
+        height: auto;
+    }
+    .weights-bar span { flex: none !important; padding: 0.6rem; font-size: 0.85rem; }
+}
+
 .stack-row {
     display: grid;
     gap: 1rem;
@@ -399,7 +407,7 @@ body {
     font-family: inherit;
 }
 
-.lead-input:focus { border-color: #bfdbfe; background: #eff6ff; }
+.lead-input:focus-visible { border-color: #bfdbfe; background: #eff6ff; outline: 2px solid var(--brand-600); outline-offset: 2px; }
 
 .consent-row {
     margin-top: 1rem;
