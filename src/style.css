@@ -375,6 +375,47 @@ body {
 .stack-title { font-weight: 800; }
 .stack-group span:last-child { color: var(--muted); font-size: 0.9rem; }
 
+/* FAQ */
+.faq { padding: 4rem 0; }
+
+.faq-list {
+    max-width: 42rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.faq-item {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 1rem;
+    padding: 1.1rem 1.4rem;
+}
+
+.faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    cursor: pointer;
+    font-weight: 700;
+    list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item summary::after {
+    content: "+";
+    flex-shrink: 0;
+    color: var(--brand-600);
+    font-size: 1.2rem;
+}
+
+.faq-item[open] summary::after { content: "\2212"; }
+
+.faq-item p { margin: 0.75rem 0 0; color: var(--muted); line-height: 1.6; }
+
 /* Join */
 .join { padding: 4rem 0 5rem; }
 
