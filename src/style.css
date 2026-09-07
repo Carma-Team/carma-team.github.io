@@ -101,10 +101,19 @@ body {
 .nav-links a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
 .nav-links a:hover { color: var(--dark); }
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
     .nav { flex-wrap: wrap; height: auto; padding-block: 0.85rem; row-gap: 0.75rem; }
-    .nav-links { order: 3; width: 100%; justify-content: center; gap: 1.25rem; }
-    .nav-links a { font-size: 0.85rem; }
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 1.25rem;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        scrollbar-width: none;
+    }
+    .nav-links::-webkit-scrollbar { display: none; }
+    .nav-links a { font-size: 0.85rem; white-space: nowrap; }
 }
 
 /* Buttons */
@@ -365,8 +374,6 @@ body {
     padding: 2rem;
 }
 
-@media (min-width: 768px) { .metric-strip { grid-template-columns: repeat(3, 1fr); } }
-
 .metric { text-align: center; position: relative; }
 
 @media (min-width: 768px) {
@@ -420,7 +427,7 @@ body {
     display: block;
     height: 100%;
     border-radius: 999px;
-    background: linear-gradient(90deg, var(--brand-700), var(--brand-500));
+    background: linear-gradient(to left, var(--brand-700), var(--brand-500));
 }
 
 /* FAQ */
