@@ -18,7 +18,7 @@ html { scroll-behavior: smooth; }
 
 body {
     margin: 0;
-    font-family: "Assistant", "Heebo", sans-serif;
+    font-family: "Heebo", sans-serif;
     color: var(--dark);
     background:
         radial-gradient(circle at 16% 10%, #dbeafe 0%, transparent 36%),
@@ -26,7 +26,7 @@ body {
         var(--bg);
 }
 
-.headline { font-family: "Heebo", "Assistant", sans-serif; font-weight: 800; margin: 0; }
+.headline { font-family: "Heebo", sans-serif; font-weight: 800; margin: 0; }
 
 .sr-only {
     position: absolute;
@@ -507,7 +507,7 @@ body {
 .legal-updated { color: var(--muted); font-size: 0.9rem; margin-top: 0.4rem; }
 
 .legal-content h2 {
-    font-family: "Heebo", "Assistant", sans-serif;
+    font-family: "Heebo", sans-serif;
     font-weight: 700;
     font-size: 1.15rem;
     margin-top: 2rem;
@@ -536,4 +536,36 @@ body {
         transition: none !important;
         scroll-behavior: auto !important;
     }
+}
+
+.cookie-banner {
+    position: fixed;
+    inset-inline: 1rem;
+    bottom: 1rem;
+    z-index: 50;
+    max-width: 32rem;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.1rem 1.3rem;
+    border-radius: 1rem;
+    background: #ffffff;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-soft);
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+.cookie-banner p { margin: 0; }
+
+.cookie-banner-actions {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: flex-end;
+}
+
+@media (max-width: 480px) {
+    .cookie-banner-actions { justify-content: stretch; }
+    .cookie-banner-actions .btn { flex: 1; }
 }

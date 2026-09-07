@@ -2,10 +2,16 @@
 <html lang="he" dir="rtl">
 <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8C0VTCCGF"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            analytics_storage: 'denied',
+            ad_storage: 'denied'
+        });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8C0VTCCGF"></script>
+    <script>
         gtag('js', new Date());
         gtag('config', 'G-M8C0VTCCGF');
     </script>
@@ -21,21 +27,45 @@
     <meta property="og:image" content="https://carma-team.github.io/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="he_IL">
+    <meta property="og:site_name" content="Carma">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Carma | נהיגה בטוחה שמתגמלת אתכם">
+    <meta name="twitter:description" content="נהיגה בטוחה טובה לכולם. היא צריכה לתגמל גם את הנהג. הכירו את Carma.">
+    <meta name="twitter:image" content="https://carma-team.github.io/og-image.png">
     <link rel="canonical" href="https://carma-team.github.io/">
     <link rel="icon" href="/mark.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Heebo:wght@500;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&display=swap"
         rel="stylesheet"
         media="print"
         onload="this.media='all'"
     >
     <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Heebo:wght@500;700;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&display=swap" rel="stylesheet">
     </noscript>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "Carma",
+        "url": "https://carma-team.github.io/",
+        "description": "אפליקציה שמנטרת נהיגה בזמן אמת ומתרגמת נהיגה בטוחה לנקודות שממירים להטבות.",
+        "applicationCategory": "LifestyleApplication",
+        "operatingSystem": "iOS, Android",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "ILS"
+        }
+    }
+    </script>
 </head>
 <body class="antialiased">
     <a href="#main-content" class="skip-link">דלגו לתוכן הראשי</a>
@@ -43,7 +73,7 @@
         <header class="site-header">
             <nav class="nav">
                 <a href="#" class="brand">
-                    <img src="/mark.svg" alt="" class="brand-mark" width="36" height="36">
+                    <img src="/mark.svg" alt="" class="brand-mark" width="32" height="36">
                     <span class="brand-name">Carma</span>
                 </a>
 
@@ -208,15 +238,15 @@
 
                     <div class="stack-row">
                         <div class="stack-group">
-                            <span class="stack-title">מובייל</span>
+                            <span class="stack-title">אפליקציה חלקה</span>
                             <span>React Native · Expo · TypeScript</span>
                         </div>
                         <div class="stack-group">
-                            <span class="stack-title">שרת</span>
+                            <span class="stack-title">שרת מהיר ואמין</span>
                             <span>Python · FastAPI · PostgreSQL</span>
                         </div>
                         <div class="stack-group">
-                            <span class="stack-title">ענן ו-CI</span>
+                            <span class="stack-title">אבטחה ברמת ענן</span>
                             <span>Azure Container Apps · GitHub Actions</span>
                         </div>
                     </div>
@@ -312,6 +342,17 @@
                 <a href="/accessibility.html" class="footer-link">הצהרת נגישות</a>
             </p>
         </footer>
+    </div>
+
+    <div id="cookie-banner" class="cookie-banner hidden" role="dialog" aria-label="הסכמה לאיסוף נתוני שימוש">
+        <p>
+            האתר משתמש ב-Google Analytics כדי להבין איך משתמשים בו. אפשר לקרוא עוד ב
+            <a href="/privacy.html" target="_blank" rel="noopener">מדיניות הפרטיות</a>.
+        </p>
+        <div class="cookie-banner-actions">
+            <button id="cookie-decline" type="button" class="btn btn-ghost btn-sm">לא תודה</button>
+            <button id="cookie-accept" type="button" class="btn btn-primary btn-sm">מאשר/ת</button>
+        </div>
     </div>
 
     <script type="module" src="/src/main.ts"></script>
