@@ -431,6 +431,26 @@ body {
 .lead-success p { margin: 0.4rem 0; }
 .lead-success .btn { margin-top: 1rem; }
 
+/* Legal pages */
+.legal { padding: 3rem 0 4rem; }
+
+.legal-content { max-width: 42rem; }
+
+.legal-content .headline { font-size: clamp(1.7rem, 3vw, 2.2rem); }
+
+.legal-updated { color: var(--muted); font-size: 0.9rem; margin-top: 0.4rem; }
+
+.legal-content h2 {
+    font-family: "Heebo", "Assistant", sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-top: 2rem;
+}
+
+.legal-content p, .legal-content ul { color: var(--muted); line-height: 1.7; }
+
+.legal-content a { color: var(--brand-600); }
+
 /* Footer */
 .site-footer {
     border-top: 1px solid var(--line);
