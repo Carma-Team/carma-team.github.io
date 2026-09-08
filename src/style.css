@@ -252,6 +252,9 @@ body {
         width: 100%;
         text-align: center;
         justify-content: center;
+    }
+
+    .nav-links a.btn-mobile-cta {
         color: #fff;
     }
 }
