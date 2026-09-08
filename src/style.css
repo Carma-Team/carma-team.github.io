@@ -189,6 +189,14 @@ body {
     .nav-toggle { display: flex; }
     .nav-desktop-cta { display: none; }
 
+    /* backdrop-filter makes .site-header a containing block for its fixed
+       descendants (.nav-backdrop, .nav-links), so the drawer would size
+       itself against the header's box instead of the viewport. */
+    .site-header {
+        backdrop-filter: none;
+        background: #fff;
+    }
+
     .nav-backdrop {
         position: fixed;
         inset: 0;
