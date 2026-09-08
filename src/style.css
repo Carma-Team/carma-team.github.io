@@ -613,26 +613,37 @@ body {
     border: 1px solid var(--line);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-soft);
-    padding: 2.5rem 2rem;
+    padding: 2.25rem 2rem 2.5rem;
     text-align: center;
 }
 
-.join-sub { color: var(--muted); margin: 1rem 0 2rem; }
+.join-sub { color: var(--muted); margin: 0.75rem 0 1.75rem; }
 
 .email-wrap {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.75rem;
+}
+
+@media (min-width: 640px) { .email-wrap { flex-direction: row; align-items: stretch; } }
+
+.lead-input {
+    direction: ltr;
+    text-align: left;
+    width: 100%;
     border: 1px solid #cbd5e1;
-    border-radius: 1rem;
-    padding: 0.5rem;
+    border-radius: 0.75rem;
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+    outline: none;
+    font-family: inherit;
     transition: border-color 0.2s ease;
 }
 
-@media (min-width: 640px) { .email-wrap { flex-direction: row; align-items: center; } }
+.lead-input:focus-visible { border-color: #C7D2FE; background: #EEEDFB; outline: 2px solid var(--brand-600); outline-offset: 2px; }
 
-.email-wrap.valid { border-color: #6ee7b7; }
-.email-wrap.invalid { border-color: #fca5a5; animation: shake 0.25s ease-in-out 2; }
+.email-wrap.valid .lead-input { border-color: #6ee7b7; }
+.email-wrap.invalid .lead-input { border-color: #fca5a5; animation: shake 0.25s ease-in-out 2; }
 
 @keyframes shake {
     0%, 100% { transform: translateX(0); }
@@ -640,32 +651,28 @@ body {
     75% { transform: translateX(3px); }
 }
 
-.lead-input {
-    direction: ltr;
-    text-align: left;
-    width: 100%;
-    border: 1px solid transparent;
-    border-radius: 0.75rem;
-    padding: 0.85rem 1rem;
-    font-size: 1rem;
-    outline: none;
-    font-family: inherit;
-}
+.email-wrap .btn { width: 100%; white-space: nowrap; }
 
-.lead-input:focus-visible { border-color: #C7D2FE; background: #EEEDFB; outline: 2px solid var(--brand-600); outline-offset: 2px; }
+@media (min-width: 640px) { .email-wrap .btn { width: auto; } }
 
 .consent-row {
-    margin-top: 1rem;
+    margin-top: 1.25rem;
     display: flex;
     align-items: flex-start;
-    gap: 0.5rem;
+    gap: 0.6rem;
     cursor: pointer;
     text-align: right;
     font-size: 0.9rem;
     color: var(--muted);
 }
 
-.consent-row input { margin-top: 0.2rem; }
+.consent-row input {
+    margin-top: 0.15rem;
+    width: 1.15rem;
+    height: 1.15rem;
+    accent-color: var(--brand-600);
+    flex-shrink: 0;
+}
 
 .join-note { margin-top: 0.75rem; font-size: 0.8rem; color: var(--muted); }
 
