@@ -14,11 +14,10 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; overflow-x: hidden; }
+html { scroll-behavior: smooth; }
 
 body {
     margin: 0;
-    overflow-x: hidden;
     font-family: "Heebo", sans-serif;
     color: var(--dark);
     background:
